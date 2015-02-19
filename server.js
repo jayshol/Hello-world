@@ -4,6 +4,8 @@ var server = http.createServer(function(req, res){
 	res.end();
 });
 
-server.listen(9000, function(){
-	console.log('listening at port 9000');
+var port = process.env.PORT || 9001;
+
+server.listen(port, function(){
+	console.log('listening at port %d', port);
 });
